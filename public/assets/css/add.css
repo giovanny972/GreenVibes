@@ -1,0 +1,108 @@
+.add__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.add__error {
+    color: red;
+    text-align: center;
+}
+
+.add__name {
+    width: 15rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(5, 90, 5);
+    font-size: 3rem;
+}
+
+.add__picture {
+    margin: 1rem 0 0 0;
+    width: 15rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(5, 90, 5);
+}
+
+.add__name:hover, .add__picture:hover {
+    color: green;
+
+}
+
+.add-control:focus {
+    border-color: green;
+    box-shadow: 2px 2px 5px rgb(5, 90, 5);
+} 
+
+.add__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    margin: 1.5rem;
+    background-color: green; 
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgb(5, 90, 5);
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .add {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5rem;
+        margin: 1rem 5rem 0 0;
+    }
+    
+    .add__header {
+        text-align: right;
+        margin-bottom: 5rem;
+    }
+
+    .add__header h2 {
+        font-size: 5rem;
+    } 
+
+    .add__header h6 {
+        font-size: 2rem;  
+        margin-top: 2rem;
+    }
+    
+    .add__form {
+        background-color: rgb(255, 255, 255, 0.9);
+        margin: 6rem;
+        border: 2px solid rgba(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.6rem;
+    }
+    
+    .add__name {
+        width: 25rem;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+    
+    .add__picture {
+        margin: 2rem 0 0 0;
+        width: 25rem;
+    }
+ 
+    .add__button { 
+        margin: 1.8rem;
+        font-size: 1.8rem;
+        padding: 0.4rem 1.5rem 0.4rem 1.5rem;
+    }
+}

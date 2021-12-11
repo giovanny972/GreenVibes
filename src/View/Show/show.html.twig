@@ -1,0 +1,53 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/styleShow.css">
+{% endblock %}
+
+{% block content %}
+    <h2 class="title__page">MOVE YOUR LEAVES {{ plant.name }} !!</h2>
+    <div class="container justify-content-center plant__card">
+        <div class="row">
+            <div class="col">
+                <div class="plant">                    
+                    <img src="{{ plant.picture }}" alt="{{ plant.name }}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container player__audio">
+        <div class="row">
+            <div class="player">
+                <div id="info" class="info">
+                    <span class="artist">
+                        {{ request.name }}
+                        <div class= showPlayer>
+                            <audio class='play' id='play' autoplay>
+                            <source src="{{ url_ngrok ~ request.link }}">
+                            </audio>
+                        </div>
+                    </span>
+                    <span class="name">                           
+                        {{ request.soundName }}                           
+                    </span>
+                    <div class="progress-bar">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <div id="control-panel" class="control-panel">
+                    <div class="album-art"></div>
+                    <div class="controls">
+                        <div class="prev"></div>
+                        <div id="play" class="play"></div>
+                        <div class="next"></div>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
+
+{% block javascript %}
+    <script src="/assets/js/show.js"></script>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/home.css">
+{% endblock %}
+
+{% block content %}
+<section class="home">
+    <h1 class="tittle__page">Which Green Vibes are you ?</h1>
+    <div class="container-fluid plantsGrid d-flex justify-content-center g-0 m-0 p-0">
+        <div class="row row-cols-12 justify-content-center mt-4">
+            {% for plant in plants %}
+                <div class="col-md-auto plant" >
+                    <div id="plant-img"><a href="/show?id={{ plant.id }}"><img src="{{ plant.picture }}" alt="{{ plant.name }}"></a></div>
+                    <div id="plant-name">{{ plant.name }}</div>
+                </div>
+            {% endfor %} 
+            <div class="col-md-auto plant" id="addCard"><a href="add"> 
+                <p>Add your new <br>
+                Green Friend</p>
+                <img src="/assets/images/logo+.png" alt="addLogo">
+            </a></div>
+        </div>
+    </div> 
+</section>    
+{% endblock %}
